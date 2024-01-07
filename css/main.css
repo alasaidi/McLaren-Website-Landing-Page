@@ -260,13 +260,13 @@ header .menu.active {
 /* ------screen----- */
 .banner .screen {
   position: absolute;
-  right: 10%;
+  right: 15%;
   bottom: 100px;
-  width: 300px;
-  height: 200px;
+  width: 200px;
+  height: 100px;
   transform-style: preserve-3d;
   animation: animate 30s linear infinite;
-  z-index: 100;
+  z-index: 200;
 }
 @keyframes animate {
   0% {
@@ -289,7 +289,7 @@ header .menu.active {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 150%;
   height: 100%;
   overflow: hidden;
   background: linear-gradient(transparent, var(--primary));
@@ -300,8 +300,8 @@ header .menu.active {
   content: "";
   top: 0;
   left: 0;
-  width: 300px;
-  height: 200px;
+  width: 200px;
+  height: 100px;
   background: var(--primary);
   transform: rotateX(-90deg) translateZ(150px);
   filter: blur(20px);
@@ -313,7 +313,7 @@ header .menu.active {
 .screen div span video {
   position: absolute;
   bottom: 0;
-  height: 75%;
+  height: 100%;
   width: 100%;
   transition: 0.5s;
   object-fit: cover;
@@ -380,7 +380,7 @@ header .menu.active {
 /* social icons  */
 .sci {
   position: absolute;
-  top: 50%;
+  top: 40%;
   right: 100px;
   transform: translateY(-50%);
   display: flex;
