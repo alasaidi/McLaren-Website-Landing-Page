@@ -183,7 +183,7 @@ header .menu.active {
   z-index: 100;
   cursor: pointer;
 }
-/* -----backgrounD video----- */
+/* -----background video----- */
 .banner .bg-video {
   display: none;
   position: absolute;
@@ -319,9 +319,11 @@ header .menu.active {
   object-fit: cover;
   object-position: center;
 }
-
+.screen-video.hidden {
+  display: none;
+}
 .trailer {
-  display: block;
+  display: none;
 }
 .trailer.active {
   display: block;

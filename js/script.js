@@ -7,6 +7,7 @@ function toggleMenu() {
 }
 function changeVideo(name) {
   const bgVideoList = document.querySelectorAll(".bg-video");
+  const trailers = document.querySelectorAll(".trailer");
   const models = document.querySelectorAll(".model");
 
   // javascript higher order array function for each
@@ -24,6 +25,14 @@ function changeVideo(name) {
       model.classList.add("active");
     }
   });
+
+  trailers.forEach((video) => {
+    video.classList.remove("active");
+    if (video.classList.contains(name)) {
+      console.log(name);
+      video.classList.add("active");
+    }
+  });
 }
 
 // change the play and pause button on click event
@@ -33,12 +42,34 @@ function togglePlay() {
   play.classList.toggle("active");
   pause.classList.toggle("active");
 }
+
+function toggleScreen(name) {
+  const videos = document.querySelectorAll(".screen-video");
+  const activeVideo = document.querySelector(".screen-video.active");
+
+  videos.forEach((video) => {
+    // Toggle the 'active' class based on the presence of the specified name
+
+    // Toggle the 'hidden' class to control visibility
+    video.classList.toggle("hidden");
+  });
+  if (activeVideo.classList.contains(name)) {
+    console.log(name);
+    activeVideo.classList.add("active");
+  }
+
+  // if (activeVideo) {
+  //   console.log(name);
+  //   activeVideo.classList.remove("active");
+  // }
+}
 function pauseVideo() {
   const bgVideoList = document.querySelectorAll(".bg-video");
   bgVideoList.forEach((video) => {
     video.pause();
   });
   togglePlay();
+  toggleScreen();
 }
 function playVideo() {
   const bgVideoList = document.querySelectorAll(".bg-video");
@@ -46,4 +77,5 @@ function playVideo() {
     video.play();
   });
   togglePlay();
+  toggleScreen();
 }
