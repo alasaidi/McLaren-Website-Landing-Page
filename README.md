@@ -1,6 +1,5 @@
 ## McLaren
 
-Author : [Ala Saidi](alasaidi55@gmail.com)
 
 ![preview](images/webpage.png)
 
